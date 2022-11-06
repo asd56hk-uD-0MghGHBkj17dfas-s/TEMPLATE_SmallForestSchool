@@ -2373,7 +2373,7 @@
                 {
                  "height":61.5655,
                  "id":61,
-                 "name":"Addon4pop",
+                 "name":"Addon4Pop",
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -2384,7 +2384,7 @@
                 {
                  "height":61.5655,
                  "id":62,
-                 "name":"Addon5pop",
+                 "name":"Addon5Pop",
                  "rotation":0,
                  "type":"area",
                  "visible":true,
@@ -2395,7 +2395,7 @@
                 {
                  "height":61.5655,
                  "id":63,
-                 "name":"Addon6pop",
+                 "name":"Addon6Pop",
                  "rotation":0,
                  "type":"area",
                  "visible":true,

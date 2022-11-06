@@ -61,6 +61,7 @@ WA.onInit().then(() => {
     })
     WA.room.onLeaveLayer('message-4').subscribe(closePopup)
 
+
     //Popup Science Cluster
     WA.room.onEnterLayer('message-5').subscribe(() => {
         currentPopup = WA.ui.openPopup("Addon5Pop","Science Cluster",[]);
