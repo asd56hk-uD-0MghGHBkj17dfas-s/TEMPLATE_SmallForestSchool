@@ -11,6 +11,68 @@ WA.onInit().then(() => {
     console.log('Scripting API ready');
     console.log('Player tags: ',WA.player.tags)
 
+    // Julia custom
+
+    WA.room.onEnterLayer("floor").subscribe(() => {
+        WA.room.hideLayer("roof");
+        WA.room.hideLayer("walls-bg-front");
+        WA.room.hideLayer("sign");
+      });
+      
+    WA.room.onLeaveLayer("floor").subscribe(() => {
+        WA.room.showLayer("roof");
+        WA.room.showLayer("walls-bg-front");
+        WA.room.showLayer("facade-furniture-bg");
+      });
+
+      WA.room.onEnterLayer("rooms_floor").subscribe(() => {
+        WA.room.hideLayer("facade-furniture-fg");
+        WA.room.hideLayer("facade");
+        WA.room.hideLayer("sign");
+      });
+      
+    WA.room.onLeaveLayer("rooms_floor").subscribe(() => {
+        WA.room.showLayer("facade-furniture-fg");
+        WA.room.showLayer("facade");
+        WA.room.showLayer("facade-furniture-bg");
+      });
+    
+    //Popup Liberary
+    WA.room.onEnterLayer('message-1').subscribe(() => {
+        currentPopup = WA.ui.openPopup("Addon1Pop","Library",[]);
+    })
+    WA.room.onLeaveLayer('message-3').subscribe(closePopup)
+
+    //Popup Ocean
+    WA.room.onEnterLayer('message-3').subscribe(() => {
+        currentPopup = WA.ui.openPopup("Addon3Pop","Ocean",[]);
+    })
+    WA.room.onLeaveLayer('message-3').subscribe(closePopup)
+
+    //Popup Playground
+    WA.room.onEnterLayer('message-2').subscribe(() => {
+        currentPopup = WA.ui.openPopup("Addon2Pop","Playground",[]);
+    })
+    WA.room.onLeaveLayer('message-2').subscribe(closePopup)
+
+    //Popup Amphitheater
+    WA.room.onEnterLayer('message-4').subscribe(() => {
+        currentPopup = WA.ui.openPopup("Addon4Pop","Amphitheater",[]);
+    })
+    WA.room.onLeaveLayer('message-4').subscribe(closePopup)
+
+    //Popup Science Cluster
+    WA.room.onEnterLayer('message-5').subscribe(() => {
+        currentPopup = WA.ui.openPopup("Addon5Pop","Science Cluster",[]);
+    })
+    WA.room.onLeaveLayer('message-5').subscribe(closePopup)
+
+    //Popup Club House
+    WA.room.onEnterLayer('message-6').subscribe(() => {
+        currentPopup = WA.ui.openPopup("Addon6Pop","Club House",[]);
+    })
+    WA.room.onLeaveLayer('message-6').subscribe(closePopup)
+      
     WA.room.onEnterLayer('clockZone').subscribe(() => {
         const today = new Date();
         const time = today.getHours() + ":" + today.getMinutes();
