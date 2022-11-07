@@ -28,7 +28,7 @@ WA.onInit().then(() => {
       WA.room.onEnterLayer("rooms_floor").subscribe(() => {
         WA.room.hideLayer("facade-furniture-fg");
         WA.room.hideLayer("facade");
-        WA.room.hideLayer("sign");
+        WA.room.hideLayer("facade-furniture-bg");
       });
       
     WA.room.onLeaveLayer("rooms_floor").subscribe(() => {
