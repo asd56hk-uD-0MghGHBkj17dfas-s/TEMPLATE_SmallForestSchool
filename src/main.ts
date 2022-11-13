@@ -41,7 +41,7 @@ WA.onInit().then(() => {
     WA.room.onEnterLayer('message-1').subscribe(() => {
         currentPopup = WA.ui.openPopup("Addon1Pop","Library",[]);
     })
-    WA.room.onLeaveLayer('message-3').subscribe(closePopup)
+    WA.room.onLeaveLayer('message-1').subscribe(closePopup)
 
     //Popup Ocean
     WA.room.onEnterLayer('message-3').subscribe(() => {
